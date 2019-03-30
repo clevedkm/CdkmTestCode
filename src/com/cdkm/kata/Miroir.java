@@ -18,16 +18,16 @@ public class Miroir {
 			
 			boolean ispair = isChaineNbreCaracterePaire(chaine);
 			if(ispair) {
-				log.info("la chaine est pair...........");
+				System.out.println("la chaine est pair...........");
 			}else {
-				log.info("la chaine est impair...........");
+				System.out.println("la chaine est impair...........");
 			}
 			
 			boolean isMiroir = isMiroirVersion1(chaine);
 			if(isMiroir) {
-				log.info("--------la chaine est miroir---------");
+				System.out.println("--------la chaine est miroir---------");
 			}else {
-				log.info("--------la chaine n'est pas miroir-------");
+				System.out.println("--------la chaine n'est pas miroir-------");
 				afficherElementIntruDansLaChaine(chaine);
 			}
 			//verifie si miroir et afficher intru
@@ -36,7 +36,7 @@ public class Miroir {
 			isMiroirSurTexteIdentiqueAvecSonInverse(chaine);
 			
 		}else {
-			log.info("Le texte est vide");
+			System.out.println("Le texte est vide");
 		}
 		
 	}
@@ -75,7 +75,7 @@ public class Miroir {
 		int j = 0;
 		for (int i = 0 ; i < chaine.length(); i++) {			
 			if(chaine.charAt(i)!= chaineReverse.charAt(i)) {
-				log.info("La texte n'est pas miroir");
+				System.out.println("La texte n'est pas miroir");
 				//les intrut de la chaine saisie sont				
 				String intru = chaine.charAt(i)+"-"+chaineReverse.charAt(i);
 				tabIntru[j] = intru;
@@ -88,7 +88,7 @@ public class Miroir {
 	private static void afficherContenuTableau(String[] tabIntru) {
 		for(int i=0; i< tabIntru.length; i++) {
 			if(tabIntru[i] != null) {				
-				log.info("les intrus sont: "+ tabIntru[i]);
+				System.out.println("les intrus sont: "+ tabIntru[i]);
 			}
 		}
 	}
@@ -97,7 +97,7 @@ public class Miroir {
 	private static void isMiroirSurTexteIdentiqueAvecSonInverse(String chaine) {
 		String chaineReverse = new StringBuilder(chaine).reverse().toString();
 		if(chaine.equalsIgnoreCase(chaineReverse)) {
-			log.info("La texte saisie Miroir");
+			System.out.println("La texte saisie Miroir");
 		}
 	}
 	
@@ -115,13 +115,13 @@ public class Miroir {
 		boolean isMiroir = true;
 		while(i<= chaine.length()/2) {
 			if(tab[i]!=tab[j]) {
-				log.info("La texte n'est pas Miroir: " + chaine);
+				System.out.println("La texte n'est pas Miroir: " + chaine);
 				return false;
 			}
 		i++;
 		j--;
 		}
-		log.info("La texte est Miroir: " + chaine);
+		System.out.println("La texte est Miroir: " + chaine);
 		return isMiroir;
 	}
 	
@@ -132,7 +132,7 @@ public class Miroir {
 		System.out.println("Combien de test voulez vous  faire ? Saisir un nombre < 5");
 		int nbre = scan.nextInt();
 		if(nbre < 1 || nbre > 5) {
-			System.out.println("Le nombre saisie doit  être compris entre 1 et 5");
+			System.out.println("Le nombre saisie doit  ï¿½tre compris entre 1 et 5");
 			nbre = scan.nextInt();
 		}
 		for(int i= 1 ; i<=nbre; i++) {
@@ -145,7 +145,7 @@ public class Miroir {
 		//lire un fichier et dire s'il contient un mot miroir
 		try {			
 			Scanner scan2 = new Scanner(System.in);
-			log.info("Saisir la source du fichier..... exemple D:\\Usersdata\\cleve.kengue-mabial\\Documents\\Doc Memoire\toto.txt ");
+			System.out.println("Saisir la source du fichier..... exemple D:\\Usersdata\\cleve.kengue-mabial\\Documents\\Doc Memoire\toto.txt ");
 			String fileName = scan2.nextLine();
 			File file = new File(fileName);
 			FileReader fr = new FileReader(file);
