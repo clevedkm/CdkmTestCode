@@ -97,7 +97,7 @@ public class Miroir {
 	private static void isMiroirSurTexteIdentiqueAvecSonInverse(String chaine) {
 		String chaineReverse = new StringBuilder(chaine).reverse().toString();
 		if(chaine.equalsIgnoreCase(chaineReverse)) {
-			System.out.println("La texte saisie Miroir");
+			System.out.println("La texte saisie Miroir ");
 		}
 	}
 	
