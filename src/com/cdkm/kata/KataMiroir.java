@@ -132,7 +132,7 @@ public class KataMiroir {
 		System.out.println("Combien de test voulez vous  faire ? Saisir un nombre < 5");
 		int nbre = scan.nextInt();
 		if(nbre < 1 || nbre > 5) {
-			System.out.println("Le nombre saisie doit  être compris entre 1 et 5");
+			System.out.println("Le nombre saisie doit  ï¿½tre compris entre 1 et 5");
 			nbre = scan.nextInt();
 		}
 		for(int i= 1 ; i<=nbre; i++) {
